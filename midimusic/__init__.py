@@ -9,6 +9,4 @@ try:
 except:
   get_ipython().system(u'pip install pretty_midi')
 
-def a3():
-  print("foobar")
-
+import analyzers, api_interaction, helpers
