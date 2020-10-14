@@ -1,18 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
-
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-
-# In[2]:
-
-
-import os
-os.chdir("/content/drive/My Drive/repos/MusicalPy") 
 from midimusic.api_interaction.completion import *
 from midimusic.api_interaction.fetcher import *
 from midimusic.helpers.beeper import *
@@ -119,7 +105,3 @@ assert isinstance(load.result, completion)
 
 
 # In[8]:
-
-
-
-

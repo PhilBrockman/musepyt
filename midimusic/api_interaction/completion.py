@@ -1,22 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-
-# In[ ]:
-
-
-import os
-os.chdir("/content/drive/My Drive/repos/MusicalPy") 
-
-
-# In[ ]:
-
 
 from midimusic.helpers.fileHelper import *
 from midimusic.helpers.timer import *
@@ -39,7 +20,7 @@ class pictureManipulation:
       librosa.display.specshow(pm.get_piano_roll(fs)[start_pitch:end_pitch],
                               hop_length=1, sr=fs, x_axis=None, y_axis=None,
                               fmin=pretty_midi.note_number_to_hz(start_pitch))
-      
+
   def png_location(midi_location):
     return "{}.png".format(".".join(midi_location.split(".")[:-1]))
 
@@ -78,7 +59,7 @@ class audioManipulation:
       return pretty_midi.instrument_name_to_program(lookup[string].title())
     except:
       return pretty_midi.instrument_name_to_program(string.title())
-        
+
   def append_notes_to_inst(self, inst, notes, velocity=100):
     for note in notes:
         inst.notes.append(pretty_midi.Note(velocity, note["pitch"], note["time_on"], note["time_on"] + note["duration"]))
@@ -143,11 +124,11 @@ class completion(fileHelper, audioManipulation, pictureManipulation):
 
   def has_children(self):
     return len(self.children) > 0
-  
+
   def default_filename(self):
     instr = self.settings.instrumentation
-    return "{}/{}/{}/{}".format(self.settings.genre, 
-                                self.settings.temp, "_".join([x for x in instr.keys() if instr[x] is True]), 
+    return "{}/{}/{}/{}".format(self.settings.genre,
+                                self.settings.temp, "_".join([x for x in instr.keys() if instr[x] is True]),
                                 timer.filetime())
 
   def load_objects(filename):
@@ -213,7 +194,3 @@ assert isinstance(d.children[0].children[0].settings, musenetSettings)
 
 
 # In[ ]:
-
-
-
-

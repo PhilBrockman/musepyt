@@ -1,28 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-
-# In[ ]:
-
-
-import os
-os.chdir("/content/drive/My Drive/repos/MusicalPy") 
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 import json
 import os
@@ -79,7 +54,7 @@ class fileHelper():
 
 
 class tester(fileHelper):
-  def __init__(self): 
+  def __init__(self):
     self.file_extension = "filehelpertester"
     self.project_root = "testing"
     self.data = "fuubar"
@@ -112,7 +87,3 @@ assert b.add() == 8
 
 
 # In[ ]:
-
-
-
-

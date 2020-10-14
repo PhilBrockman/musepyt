@@ -1,28 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-
-
-
-# In[3]:
-
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-
-# In[4]:
-
-
-import os
-os.chdir("/content/drive/My Drive/repos/MusicalPy") 
-
-
-# In[5]:
-
 
 from midimusic.helpers.fileHelper import *
 from midimusic.api_interaction.musenetSettings import *
@@ -118,8 +93,8 @@ class spider(fileHelper):
           self.logger.data.append(info)
 
           self.logger.log(f"Backing up data for spider {self.save()}", self.verbose)
-          
-      
+
+
   def load_objects(filename):
     json = spider.load_json(filename)
     return spider.objectize(json)
@@ -128,7 +103,7 @@ class spider(fileHelper):
     if json is None:
       return json
     else:
-      partial = fileHelper.convert(json, spider())      
+      partial = fileHelper.convert(json, spider())
       partial.logger = logger.objectize(partial.logger)
       return partial
 
@@ -138,7 +113,7 @@ class spider(fileHelper):
 
 
 class logger(fileHelper):
-  def __init__(self): 
+  def __init__(self):
     self.file_extension = "logs"
     self.queried = []
     self.data = []
@@ -186,7 +161,7 @@ class fixed_filename(spider):
 
   def default_filename(self):
     return f"spiders/initiated_{self.fixed_time}"
-  
+
   def load_objects(filename):
     json = fixed_filename.load_json(filename)
     return fixed_filename.objectize(json)
@@ -195,11 +170,11 @@ class fixed_filename(spider):
     if json is None:
       return json
     else:
-      partial = fileHelper.convert(json, fixed_filename()) 
+      partial = fileHelper.convert(json, fixed_filename())
       partial.logger = logger.objectize(partial.logger)
-      
+
       return partial
-  
+
 
 
 
@@ -228,7 +203,3 @@ g = generator(c)
 
 
 # In[ ]:
-
-
-
-
