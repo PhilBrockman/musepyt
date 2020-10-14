@@ -1,4 +1,5 @@
-from distutils.core import setup, find_packages
+from distutils.core import setup
+from setuptools import find_packages
 setup(
   name = 'midimusic',         # How you named your package folder (MyLib)
   #packages = ['midimusic'],   # Chose the same as "name"
