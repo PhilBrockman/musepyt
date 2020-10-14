@@ -1,14 +1,15 @@
-from distutils.core import setup
+from distutils.core import setup, find_packages
 setup(
   name = 'midimusic',         # How you named your package folder (MyLib)
-  packages = ['midimusic'],   # Chose the same as "name"
-  version = '0.2',      # Start with a small number and increase it with every change you make
+  #packages = ['midimusic'],   # Chose the same as "name"
+  packages=find_packages(),
+  version = '0.4',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Automate fetching of midis from MuseNet',   # Give a short description about your library
   author = 'Phil Brockman',                   # Type in your name
   author_email = 'phil.brockman@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/PhilBrockman/musepyt',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v2.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v4.tar.gz',    # I explain this later on
   keywords = ['MuseNet', 'midi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'IPython',
