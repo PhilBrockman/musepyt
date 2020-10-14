@@ -1,0 +1,3 @@
+IPython
+pretty_midi
+numpy
