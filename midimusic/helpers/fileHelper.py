@@ -74,16 +74,3 @@ class adder(fileHelper):
     for o in self.obs:
       total += o
     return total
-
-
-# In[ ]:
-
-
-a = adder(1, 3, 4)
-assert a.add() == 8
-a.save(filename = "foobar")
-b = adder.load("assert/foobar.assert_test", adder())
-assert b.add() == 8
-
-
-# In[ ]:

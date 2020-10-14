@@ -35,33 +35,4 @@ class timer:
     return strftime("%Y_%m_%d_%H_%M_%S", localtime())
 
 
-# In[ ]:
-
-
-t = timer()
-
-
-# In[ ]:
-
-
-t.start()
-
-
-# In[ ]:
-
-
-t.stop()
-print(t.recordings)
-
-
-# In[ ]:
-
-
-timer.filetime()
-
-
-# In[ ]:
-
-
-
-
+#

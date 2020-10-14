@@ -3,10 +3,7 @@ from midimusic.helpers.fileHelper import *
 from midimusic.api_interaction.musenetSettings import *
 from midimusic.api_interaction.completion import *
 from midimusic.api_interaction.generator import *
-#import magicalMusic.core
 
-
-# In[23]:
 
 
 class spider(fileHelper):
@@ -139,21 +136,6 @@ class logger(fileHelper):
       print(msg)
 
 
-# In[9]:
-
-
-s = spider.load_objects("(arch) loops 4/max fetches 1/spiders/2020_08_09_06_17_50.spider")
-
-
-# In[10]:
-
-
-assert s.logger.data[3].settings.genre == "chopin"
-
-
-# In[11]:
-
-
 class fixed_filename(spider):
   def __init__(self):
     super().__init__()
@@ -174,32 +156,3 @@ class fixed_filename(spider):
       partial.logger = logger.objectize(partial.logger)
 
       return partial
-
-
-
-
-# In[12]:
-
-
-f = fixed_filename.load_objects("(arch) loops 4/max fetches 1/spiders/initiated_2020_08_09_06_28_32.spider")
-
-
-# In[13]:
-
-
-assert len(f.logger.data) == 324
-
-
-# In[16]:
-
-
-c = completion(project_root="testing")
-
-
-# In[17]:
-
-
-g = generator(c)
-
-
-# In[ ]:

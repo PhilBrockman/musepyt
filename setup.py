@@ -4,13 +4,13 @@ setup(
   name = 'midimusic',         # How you named your package folder (MyLib)
   #packages = ['midimusic'],   # Chose the same as "name"
   packages=find_packages(),
-  version = '0.6',      # Start with a small number and increase it with every change you make
+  version = '0.7',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Automate fetching of midis from MuseNet',   # Give a short description about your library
   author = 'Phil Brockman',                   # Type in your name
   author_email = 'phil.brockman@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/PhilBrockman/musepyt',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v6.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v7.tar.gz',    # I explain this later on
   keywords = ['MuseNet', 'midi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'IPython',

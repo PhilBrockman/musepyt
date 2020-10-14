@@ -1,12 +1,12 @@
 Metadata-Version: 1.1
 Name: midimusic
-Version: 0.5
+Version: 0.6
 Summary: Automate fetching of midis from MuseNet
 Home-page: https://github.com/PhilBrockman/musepyt
 Author: Phil Brockman
 Author-email: phil.brockman@gmail.com
 License: MIT
-Download-URL: https://github.com/PhilBrockman/musepyt/archive/v5.tar.gz
+Download-URL: https://github.com/PhilBrockman/musepyt/archive/v6.tar.gz
 Description: UNKNOWN
 Keywords: MuseNet,midi
 Platform: UNKNOWN

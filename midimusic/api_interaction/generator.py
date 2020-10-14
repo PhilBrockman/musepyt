@@ -89,19 +89,3 @@ class generator(fileHelper):
       partial.payload = completion.objectize(partial.payload)
       partial.result  = completion.objectize(partial.result)
       return partial
-
-
-
-# In[7]:
-
-
-load = generator.load_objects("testing/gen save load/thebeatles/0.8/piano/2020_08_08_21_54_50.generator")
-
-
-# In[8]:
-
-
-assert isinstance(load.result, completion)
-
-
-# In[8]:

@@ -48,37 +48,3 @@ class attributeAnalyzer:
     for q in self.questions:
       out += ("{}: {}\n".format(q.text,q.answer))
     return out
-
-
-# In[10]:
-
-
-aa = attributeAnalyzer()
-aa.new_question("how are you?", style="keyboardinput", options = {"this good": 1, "this bad": -1})
-aa.new_question("What is 1+1", style="keyboardinput", options={"first":-4, "second":3, "third": 2})
-assert aa.has_blank_answers()
-
-
-# In[11]:
-
-
-for q in aa.questions:
-  q.answer = "something"
-
-assert aa.has_blank_answers() is False
-
-
-# In[13]:
-
-
-b = attributeAnalyzer(aa.questions)
-
-assert b.has_blank_answers() == False
-assert len(b.questions) == 2
-
-
-# In[ ]:
-
-
-
-

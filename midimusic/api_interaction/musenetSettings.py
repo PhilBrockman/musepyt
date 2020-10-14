@@ -15,7 +15,7 @@ class musenetSettings:
     self.length = length
     self.truncation = truncation
     self.audioFormat = audioFormat
-   
+
   def legal_composers():
     return ['chopin',
             'mozart',
@@ -25,7 +25,7 @@ class musenetSettings:
             'beethoven',
             'thebeatles',
             'franksinatra',
-            'tchaikovsky'] 
+            'tchaikovsky']
 
   def turn_on(self, instruments):
     self.toggle_instruments(instruments, True)
@@ -51,28 +51,3 @@ class musenetSettings:
   def __str__(self):
     s = """genre: {}\ntemp: {}\ninstrumentation: {}\ntokens: {}\ntruncation: {}\naudio format: {}\nenc: <{}>"""
     return s.format(self.genre, self.temp, self.instrumentation, self.length, self.truncation, self.audioFormat, self.enc)
-
-
-# In[2]:
-
-
-assert musenetSettings(instrumentation = ["piano", "winds"]).instrumentation == {'bass': False,
- 'drums': False,
- 'guitar': False,
- 'harp': False,
- 'piano': True,
- 'strings': False,
- 'winds': True}
-
-
-# In[3]:
-
-
-assert musenetSettings.legal_composers()[0] == "chopin"
-
-
-# In[ ]:
-
-
-
-
