@@ -8,7 +8,7 @@ setup(
   author = 'Phil Brockman',                   # Type in your name
   author_email = 'phil.brockman@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/PhilBrockman/musepyt',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/PhilBrockman/musepyt/archive/v2.tar.gz',    # I explain this later on
   keywords = ['MuseNet', 'midi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'IPython',
